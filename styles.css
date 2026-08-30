@@ -559,3 +559,26 @@ footer a:hover {
 .back-to-top:hover {
   color: var(--verde-neon) !important;
 }
+
+.cv-card {
+  display: flex;
+  gap: 20px;
+  background-color: var(--gris-oscuro);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.cv-numero {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--azul-electrico);
+  opacity: 0.4;
+  min-width: 40px;
+}
+
+.cv-contenido {
+  flex: 1;
+}
