@@ -582,3 +582,13 @@ footer a:hover {
 .cv-contenido {
   flex: 1;
 }
+
+.cv-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 6px;
+  flex-shrink: 0;
+}
