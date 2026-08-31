@@ -629,3 +629,41 @@ footer a:hover {
   color: #B3B3B3;
   font-weight: 200;
 }
+
+/* Ajustes responsive para móvil */
+@media (max-width: 768px) {
+  .portafolio {
+    padding: 40px 20px;
+  }
+
+  .skills {
+    padding: 40px 20px;
+  }
+
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ajustes responsive para tablet */
++@media (min-width: 769px) and (max-width: 1024px) {
+  .portafolio {
+    padding: 50px 40px;
+  }
+
+  .skills {
+    padding: 50px 40px;
+  }
+
+  .contact-section {
+    padding: 50px 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
