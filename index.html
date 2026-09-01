@@ -302,7 +302,9 @@
 <!--contacto-->
 <section id="contacto" class="contact-section">
   <h2 class="text-center mb-2">Construyamos algo juntos</h2>
-  <p class="text-center contact-subtitle">¿Buscas a alguien que combine ingeniería y tecnología para resolver problemas reales?. Conversemos</p>
+  <p class="text-center contact-subtitle">
+    ¿Buscas a alguien que combine ingeniería y tecnología para resolver problemas reales? Conversemos
+  </p>
 
   <div class="contact-wrapper">
 
@@ -339,21 +341,22 @@
         </div>
       </div>
     </div>
-      <form name="contacto" method="POST" data-netlify="true" action="/index.html" class="contact-form">
-      <input type="hidden" name="form-name" value="contacto" />
+
+    <!-- Formulario con Formspree -->
+    <form action="https://formspree.io/f/mjyvygzv" method="POST" class="contact-form">
       <div class="form-group">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="name" required>
       </div>
 
       <div class="form-group">
         <label for="correo">Correo</label>
-        <input type="email" id="correo" name="correo" required>
+        <input type="email" id="correo" name="email" required>
       </div>
 
       <div class="form-group">
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="3" required></textarea>
+        <textarea id="mensaje" name="message" rows="3" required></textarea>
       </div>
 
       <button type="submit" class="btn-enviar">Enviar mensaje</button>
