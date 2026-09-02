@@ -857,3 +857,10 @@ footer a:hover {
   width: 100%;
   height: auto;
 }
+
+#google_translate_element {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+}
