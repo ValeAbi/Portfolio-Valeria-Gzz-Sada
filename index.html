@@ -34,6 +34,64 @@
 
   <!--contenido principal-->
   <main id="inicio" class="container text-center my-5">
+       <div class="emblema-mecatronica">
+   <div class="emblema-mecatronica">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .gear-rotate {
+        transform-origin: 100px 100px;
+        animation: girarEngrane 12s linear infinite;
+      }
+      @keyframes girarEngrane {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .trace {
+        stroke: #C9A96E;
+        stroke-width: 1.5;
+        fill: none;
+        opacity: 0.5;
+      }
+      .pulso {
+        fill: #E3C88F;
+        animation: parpadeo 1.5s ease-in-out infinite;
+      }
+      .pulso.d2 { animation-delay: 0.4s; }
+      .pulso.d3 { animation-delay: 0.8s; }
+      .pulso.d4 { animation-delay: 1.2s; }
+      @keyframes parpadeo {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+    </style>
+
+    <path class="trace" d="M 100 100 L 50 100 L 50 50" />
+    <path class="trace" d="M 100 100 L 150 100 L 150 50" />
+    <path class="trace" d="M 100 100 L 50 100 L 50 150" />
+    <path class="trace" d="M 100 100 L 150 100 L 150 150" />
+
+    <circle class="pulso d1" cx="50" cy="50" r="4" />
+    <circle class="pulso d2" cx="150" cy="50" r="4" />
+    <circle class="pulso d3" cx="50" cy="150" r="4" />
+    <circle class="pulso d4" cx="150" cy="150" r="4" />
+
+    <g class="gear-rotate">
+         <circle cx="100" cy="100" r="30" fill="none" stroke="#C9A96E" stroke-width="4" />
+         <circle cx="100" cy="100" r="10" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
+          <g fill="#C9A96E">
+          <rect x="94" y="60" width="12" height="16" rx="2" />
+           <rect x="94" y="124" width="12" height="16" rx="2" />
+           <rect x="60" y="94" width="16" height="12" rx="2" />
+           <rect x="124" y="94" width="16" height="12" rx="2" />
+           <rect x="94" y="60" width="12" height="16" rx="2" transform="rotate(45 100 100)" />
+           <rect x="94" y="124" width="12" height="16" rx="2" transform="rotate(45 100 100)" />
+           <rect x="60" y="94" width="16" height="12" rx="2" transform="rotate(45 100 100)" />
+           <rect x="124" y="94" width="16" height="12" rx="2" transform="rotate(45 100 100)" />
+            </g>
+           </g>
+         </svg>
+       </div> 
+    </div>
         <h1>¡Hola! Soy <em class="nombre-destacado">Valeria</em> Abigail González Sada</h1>
     <p class="tagline">Diseñemos el futuro, <em>juntos</em></p>
     <p>Ingeniera mecatrónica en formación especializada en automatización y desarrollo con Java. Me apasiona crear soluciones tecnológicas eficientes y aprender constantemente.</p>

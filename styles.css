@@ -847,3 +847,13 @@ footer a:hover {
 .card-text {
   text-align: justify;
 }
+
+.emblema-mecatronica {
+  width: 140px;
+  margin: 0 auto 20px auto;
+}
+
+.emblema-mecatronica svg {
+  width: 100%;
+  height: auto;
+}
