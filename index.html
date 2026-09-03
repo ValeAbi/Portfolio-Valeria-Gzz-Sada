@@ -11,7 +11,33 @@
 </head>
 <body>
 
-    <div id="google_translate_element"></div>
+  <div class="circuit-bg" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="circuitPattern" width="220" height="220" patternUnits="userSpaceOnUse">
+          <path class="circuit-trace flow" d="M10 10 H110 V80 H200" />
+          <path class="circuit-trace" d="M0 150 H60 V210" />
+          <path class="circuit-trace flow" d="M150 0 V60 H220" />
+          <path class="circuit-trace" d="M180 120 H120 V180 H40" />
+          <circle class="circuit-node n1" cx="110" cy="80" r="3" />
+          <circle class="circuit-node n2" cx="60" cy="210" r="3" />
+          <circle class="circuit-node n3" cx="150" cy="60" r="3" />
+          <circle class="circuit-node n4" cx="120" cy="180" r="3" />
+          <circle class="circuit-node n5" cx="10" cy="10" r="2.2" />
+          <circle class="circuit-node n6" cx="220" cy="60" r="2.2" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+    </svg>
+  </div>
+
+  <div class="selector-idioma">
+    <div class="toggle-idioma">
+      <div id="knob" class="knob"></div>
+      <button id="opt-es" class="opcion activa">ES</button>
+      <button id="opt-en" class="opcion">EN</button>
+    </div>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #14100C;">
@@ -22,13 +48,13 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#acerca">Acerca de mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#habilidades">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#portafolio">Portafolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#acerca" data-es="Acerca de mí" data-en="About me">Acerca de mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#habilidades" data-es="Skills" data-en="Skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html" data-es="CV" data-en="Resume">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html" data-es="Blog" data-en="Blog">Blog</a></li>
         </ul>
       </div>
     </div>
@@ -36,74 +62,74 @@
 
   <!--contenido principal-->
   <main id="inicio" class="container text-center my-5">
-       <div class="emblema-mecatronica">
-   <div class="emblema-mecatronica">
-  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <style>
-      .gear-rotate {
-        transform-origin: 100px 100px;
-        animation: girarEngrane 12s linear infinite;
-      }
-      @keyframes girarEngrane {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .trace {
-        stroke: #C9A96E;
-        stroke-width: 1.5;
-        fill: none;
-        opacity: 0.5;
-      }
-      .pulso {
-        fill: #E3C88F;
-        animation: parpadeo 1.5s ease-in-out infinite;
-      }
-      .pulso.d2 { animation-delay: 0.4s; }
-      .pulso.d3 { animation-delay: 0.8s; }
-      .pulso.d4 { animation-delay: 1.2s; }
-      @keyframes parpadeo {
-        0%, 100% { opacity: 0.2; }
-        50% { opacity: 1; }
-      }
-    </style>
 
-    <path class="trace" d="M 100 100 L 50 100 L 50 50" />
-    <path class="trace" d="M 100 100 L 150 100 L 150 50" />
-    <path class="trace" d="M 100 100 L 50 100 L 50 150" />
-    <path class="trace" d="M 100 100 L 150 100 L 150 150" />
+    <div class="emblema-mecatronica">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .gear-rotate {
+            transform-origin: 100px 100px;
+            animation: girarEngrane 12s linear infinite;
+          }
+          @keyframes girarEngrane {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+          .trace {
+            stroke: #C9A96E;
+            stroke-width: 1.5;
+            fill: none;
+            opacity: 0.5;
+          }
+          .pulso {
+            fill: #E3C88F;
+            animation: parpadeo 1.5s ease-in-out infinite;
+          }
+          .pulso.d2 { animation-delay: 0.4s; }
+          .pulso.d3 { animation-delay: 0.8s; }
+          .pulso.d4 { animation-delay: 1.2s; }
+          @keyframes parpadeo {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+          }
+        </style>
 
-    <circle class="pulso d1" cx="50" cy="50" r="4" />
-    <circle class="pulso d2" cx="150" cy="50" r="4" />
-    <circle class="pulso d3" cx="50" cy="150" r="4" />
-    <circle class="pulso d4" cx="150" cy="150" r="4" />
+        <path class="trace" d="M 100 100 L 50 100 L 50 50" />
+        <path class="trace" d="M 100 100 L 150 100 L 150 50" />
+        <path class="trace" d="M 100 100 L 50 100 L 50 150" />
+        <path class="trace" d="M 100 100 L 150 100 L 150 150" />
 
-    <g class="gear-rotate">
-         <circle cx="100" cy="100" r="30" fill="none" stroke="#C9A96E" stroke-width="4" />
-         <circle cx="100" cy="100" r="10" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
+        <circle class="pulso d1" cx="50" cy="50" r="4" />
+        <circle class="pulso d2" cx="150" cy="50" r="4" />
+        <circle class="pulso d3" cx="50" cy="150" r="4" />
+        <circle class="pulso d4" cx="150" cy="150" r="4" />
+
+        <g class="gear-rotate">
+          <circle cx="100" cy="100" r="30" fill="none" stroke="#C9A96E" stroke-width="4" />
+          <circle cx="100" cy="100" r="10" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
           <g fill="#C9A96E">
-          <rect x="94" y="60" width="12" height="16" rx="2" />
-           <rect x="94" y="124" width="12" height="16" rx="2" />
-           <rect x="60" y="94" width="16" height="12" rx="2" />
-           <rect x="124" y="94" width="16" height="12" rx="2" />
-           <rect x="94" y="60" width="12" height="16" rx="2" transform="rotate(45 100 100)" />
-           <rect x="94" y="124" width="12" height="16" rx="2" transform="rotate(45 100 100)" />
-           <rect x="60" y="94" width="16" height="12" rx="2" transform="rotate(45 100 100)" />
-           <rect x="124" y="94" width="16" height="12" rx="2" transform="rotate(45 100 100)" />
-            </g>
-           </g>
-         </svg>
-       </div> 
+            <rect x="94" y="60" width="12" height="16" rx="2" />
+            <rect x="94" y="124" width="12" height="16" rx="2" />
+            <rect x="60" y="94" width="16" height="12" rx="2" />
+            <rect x="124" y="94" width="16" height="12" rx="2" />
+            <rect x="94" y="60" width="12" height="16" rx="2" transform="rotate(45 100 100)" />
+            <rect x="94" y="124" width="12" height="16" rx="2" transform="rotate(45 100 100)" />
+            <rect x="60" y="94" width="16" height="12" rx="2" transform="rotate(45 100 100)" />
+            <rect x="124" y="94" width="16" height="12" rx="2" transform="rotate(45 100 100)" />
+          </g>
+        </g>
+      </svg>
     </div>
-        <h1>¡Hola! Soy <em class="nombre-destacado">Valeria</em> Abigail González Sada</h1>
-    <p class="tagline">Diseñemos el futuro, <em>juntos</em></p>
-    <p>Ingeniera mecatrónica en formación especializada en automatización y desarrollo con Java. Me apasiona crear soluciones tecnológicas eficientes y aprender constantemente.</p>
+
+    <h1 data-es-html="¡Hola! Soy <em class='nombre-destacado'>Valeria</em> Abigail González Sada" data-en-html="Hi! I'm <em class='nombre-destacado'>Valeria</em> Abigail González Sada">¡Hola! Soy <em class="nombre-destacado">Valeria</em> Abigail González Sada</h1>
+    <p class="tagline" data-es-html="Diseñemos el futuro, <em>juntos</em>" data-en-html="Let's design the future, <em>together</em>">Diseñemos el futuro, <em>juntos</em></p>
+    <p data-es="Ingeniera mecatrónica en formación especializada en automatización y desarrollo con Java. Me apasiona crear soluciones tecnológicas eficientes y aprender constantemente." data-en="Mechatronics engineer specialized in automation and Java development. I'm passionate about creating efficient tech solutions and constantly learning.">Ingeniera mecatrónica en formación especializada en automatización y desarrollo con Java. Me apasiona crear soluciones tecnológicas eficientes y aprender constantemente.</p>
     <div class="mt-3">
       <a href="https://github.com/ValeAbi" target="_blank" class="btn btn-success me-2">GitHub</a>
       <a href="https://linkedin.com/in/valeriagonzalezsada" target="_blank" class="btn btn-success me-2">LinkedIn</a>
-      <a href="mailto:valeriagonzalezsada@gmail.com" class="btn btn-success">Correo</a>
+      <a href="mailto:valeriagonzalezsada@gmail.com" class="btn btn-success" data-es="Correo" data-en="Email">Correo</a>
     </div>
     <a href="index.html#acerca" class="scroll-hint">
-      Conóceme más
+      <span data-es="Conóceme más" data-en="Get to know me">Conóceme más</span>
       <span class="scroll-arrow">↓</span>
      </a>
   </main>
@@ -111,15 +137,15 @@
 <!-- Sección Acerca de mí -->
 <section id="acerca" class="page-content">
   <img src="images/valeria.jpg" alt="Foto de Valeria" class="about-photo">
-  <h2 class="text-center mb-4">Acerca de mí</h2>
-  <p>
-    Soy Valeria Abigail González Sada, tengo 23 años y soy originaria de Monterrey, Nuevo León.
+  <h2 class="text-center mb-4" data-es="Acerca de mí" data-en="About me">Acerca de mí</h2>
+  <p data-es="Soy Valeria Abigail González Sada, originaria de Monterrey, Nuevo León. Soy egresada de Ingeniería Mecatrónica con una pasión particular por el punto donde se cruzan el mundo físico y el digital. Me gusta entender cómo funcionan los sistemas —ya sea un motor, un edificio o una aplicación— y encontrar la forma de hacerlos más eficientes, más simples y más inteligentes." data-en="I'm Valeria Abigail González Sada, originally from Monterrey, Nuevo León. I graduated in Mechatronics Engineering with a particular passion for where the physical and digital worlds meet. I like understanding how systems work — whether it's a motor, a building, or an application — and finding ways to make them more efficient, simpler, and smarter.">
+    Soy Valeria Abigail González Sada, originaria de Monterrey, Nuevo León.
     Soy egresada de Ingeniería Mecatrónica con una pasión particular por el punto donde se
     cruzan el mundo físico y el digital. Me gusta entender cómo funcionan los sistemas —ya sea
     un motor, un edificio o una aplicación— y encontrar la forma de hacerlos más eficientes,
     más simples y más inteligentes.
   </p>
-  <p>
+  <p data-es="Formo parte del grupo de excelencia académica de los 100 mejores estudiantes de la Facultad de Ingeniería Mecánica y Eléctrica (FIME), un reconocimiento que refleja mi compromiso constante con el aprendizaje y los resultados. Mi experiencia combina automatización industrial y desarrollo de software: he programado sistemas de control para edificios inteligentes (BMS), reducido consumo energético en plantas de manufactura, y construido aplicaciones web full-stack con Java, Spring Boot y React." data-en="I'm part of the academic excellence group of the top 100 students at the Faculty of Mechanical and Electrical Engineering (FIME), a recognition that reflects my constant commitment to learning and results. My experience combines industrial automation and software development: I've programmed control systems for smart buildings (BMS), reduced energy consumption in manufacturing plants, and built full-stack web applications with Java, Spring Boot, and React.">
     Formo parte del grupo de excelencia académica de los 100 mejores estudiantes de la
     Facultad de Ingeniería Mecánica y Eléctrica (FIME), un reconocimiento que refleja mi
     compromiso constante con el aprendizaje y los resultados. Mi experiencia combina
@@ -127,7 +153,7 @@
     para edificios inteligentes (BMS), reducido consumo energético en plantas de manufactura,
     y construido aplicaciones web full-stack con Java, Spring Boot y React.
   </p>
-  <p>
+  <p data-es="El liderazgo es algo que practico de forma constante. En ZF Group lideré la Comisión Mixta, impartí capacitaciones a contratistas y estuve a cargo de inducciones para nuevo personal, liderando equipos y procesos con responsabilidad y disposición para enseñar. Disfruto aprender herramientas nuevas, optimizar lo que ya existe y trabajar en equipo para que las ideas se conviertan en soluciones reales." data-en="Leadership is something I practice constantly. At ZF Group, I led the Joint Committee, delivered training sessions for contractors, and was in charge of onboarding for new staff — leading teams and processes with responsibility and a willingness to teach. I enjoy learning new tools, optimizing what already exists, and working as a team to turn ideas into real solutions.">
     El liderazgo es algo que practico de forma constante. En ZF Group lideré la
     Comisión Mixta, impartí capacitaciones a contratistas y estuve a cargo de inducciones
     para nuevo personal, liderando equipos y procesos con responsabilidad y disposición para
@@ -138,11 +164,11 @@
 
 <!-- Sección Habilidades Técnicas -->
 <section id="habilidades" class="skills my-5">
-  <h2 class="text-center mb-5">Habilidades Técnicas</h2>
+  <h2 class="text-center mb-5" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h2>
   <div class="skills-grid">
 
     <div class="skills-column">
-      <h4><span class="bar"></span>Frontend</h4>
+      <h4><span class="bar"></span><span data-es="Frontend" data-en="Frontend">Frontend</span></h4>
       <div class="skills-tags">
         <span class="skill-tag">HTML</span>
         <span class="skill-tag">CSS</span>
@@ -153,7 +179,7 @@
     </div>
 
     <div class="skills-column">
-      <h4><span class="bar"></span>Backend</h4>
+      <h4><span class="bar"></span><span data-es="Backend" data-en="Backend">Backend</span></h4>
       <div class="skills-tags">
         <span class="skill-tag">Spring Boot</span>
         <span class="skill-tag">Java</span>
@@ -164,7 +190,7 @@
     </div>
 
     <div class="skills-column">
-      <h4><span class="bar"></span>Tools</h4>
+      <h4><span class="bar"></span><span data-es="Tools" data-en="Tools">Tools</span></h4>
       <div class="skills-tags">
         <span class="skill-tag">Git</span>
         <span class="skill-tag">GitHub</span>
@@ -174,7 +200,7 @@
     </div>
 
     <div class="skills-column">
-      <h4><span class="bar"></span>Automatización Industrial</h4>
+      <h4><span class="bar"></span><span data-es="Automatización Industrial" data-en="Industrial Automation">Automatización Industrial</span></h4>
       <div class="skills-tags">
         <span class="skill-tag">SolidWorks</span>
         <span class="skill-tag">AutoCAD</span>
@@ -184,13 +210,13 @@
         <span class="skill-tag">Control Basic</span>
         <span class="skill-tag">Arduino</span>
         <span class="skill-tag">MicroPython</span>
-        <span class="skill-tag">Electrónica Analógica</span>
-        <span class="skill-tag">Electrónica Digital</span>
+        <span class="skill-tag" data-es="Electrónica Analógica" data-en="Analog Electronics">Electrónica Analógica</span>
+        <span class="skill-tag" data-es="Electrónica Digital" data-en="Digital Electronics">Electrónica Digital</span>
       </div>
     </div>
 
     <div class="skills-column">
-      <h4><span class="bar"></span>Gestión y Productividad</h4>
+      <h4><span class="bar"></span><span data-es="Gestión y Productividad" data-en="Management &amp; Productivity">Gestión y Productividad</span></h4>
       <div class="skills-tags">
         <span class="skill-tag">SAP (PM)</span>
         <span class="skill-tag">Power Automate</span>
@@ -202,7 +228,7 @@
     </div>
 
     <div class="skills-column">
-      <h4><span class="bar"></span>Metodologías</h4>
+      <h4><span class="bar"></span><span data-es="Metodologías" data-en="Methodologies">Metodologías</span></h4>
       <div class="skills-tags">
         <span class="skill-tag">Scrum</span>
         <span class="skill-tag">Kanban</span>
@@ -216,143 +242,191 @@
 
 <!-- Sección Portafolio -->
 <section id="portafolio" class="portafolio my-5">
-  <h2 class="text-center mb-4">Mis proyectos</h2>
+  <h2 class="text-center mb-4" data-es="Mis proyectos" data-en="My Projects">Mis proyectos</h2>
   <div class="grid">
 
-    <div class="card">
-      <div class="card-preview">
-    <iframe src="https://miguel-asc.github.io/Chispazo/" title="Chispazo"></iframe>
-  </div>
-      <h3>Ecommerce: Chispazo</h3>
-      <p class="fecha">agosto 2026 – octubre 2026</p>
-      <p class="descripcion">Distribución de componentes electrónicos. Chispazo es una tienda en línea de componentes electrónicos pensada para todos: desde quien arma su primer circuito hasta el ingeniero que necesita piezas de precisión para su próximo proyecto.</p>
-      <div class="tech-tags">
-        <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
-        <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
-        <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-        <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
-        <span class="tag"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
-        <span class="tag"><i class="devicon-react-original colored"></i> React</span>
-        <span class="tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-        <span class="tag"><i class="devicon-jira-plain colored"></i> Jira</span>
-        <span class="tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
-        <span class="tag"><i class="devicon-figma-plain colored"></i> Figma</span>
-        <span class="tag"><i class="devicon-github-original colored"></i> GitHub</span>
-        <span class="tag"><i class="devicon-git-plain colored"></i> Git</span>
-     </div>
-      <div class="links">
-        <a href="https://github.com/Miguel-ASC/Chispazo" target="_blank" class="btn btn-info">Repositorio</a>
-        <a href="https://miguel-asc.github.io/Chispazo/" target="_blank" class="btn btn-info">Ver página</a>
+    <!-- Proyecto 1: Chispazo -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+
+        <div class="flip-card-front">
+          <div class="card-preview">
+            <iframe src="https://miguel-asc.github.io/Chispazo/" title="Chispazo"></iframe>
+          </div>
+          <div class="card-info">
+            <p class="categoria" data-es="Proyecto integrador" data-en="Capstone project">Proyecto integrador</p>
+            <h3>Chispazo</h3>
+            <p class="descripcion" data-es="Distribución de componentes electrónicos. E-commerce con carrito de compras y catálogo." data-en="Electronic components distribution. E-commerce site with shopping cart and catalog.">Distribución de componentes electrónicos. E-commerce con carrito de compras y catálogo.</p>
+          </div>
+        </div>
+
+        <div class="flip-card-back">
+          <p class="categoria" data-es="Tecnologías" data-en="Technologies">Tecnologías</p>
+          <div class="tech-tags">
+            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+            <span class="tag"><i class="devicon-react-original colored"></i> React</span>
+          </div>
+          <a href="https://miguel-asc.github.io/Chispazo/" target="_blank" class="ver-demo" data-es="Ver sitio demo →" data-en="View demo →">Ver sitio demo →</a>
+          <a href="https://github.com/Miguel-ASC/Chispazo" target="_blank" class="ver-demo" data-es="Repositorio →" data-en="Repository →">Repositorio →</a>
+        </div>
+
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-preview">
-        <iframe src="https://landingpage-athleticpro.netlify.app" title="Athletic Pro"></iframe>
-      </div>
-      <h3>Landing page deportiva-Hackathon</h3>
-      <p class="fecha">agosto 2026</p>
-      <p class="descripcion">AthleticPro es una landing page de e-commerce deportivo enfocada en patinaje artístico, natación, atletismo y basketball, con carrito de compras y sección de contacto integrados</p>
-      <div class="tech-tags">
-        <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
-        <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
-        <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-        <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
-        <span class="tag"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
-        <span class="tag"><i class="devicon-figma-plain colored"></i> Figma</span>
-        <span class="tag"><i class="devicon-github-original colored"></i> GitHub</span>
-        <span class="tag"><i class="devicon-git-plain colored"></i> Git</span>
-     </div>
-      <div class="links">
-        <a href="https://github.com/ValeAbi/Landing-page_Athletic-Pro" target="_blank" class="btn btn-info">Repositorio</a>
-        <a href="https://landingpage-athleticpro.netlify.app" target="_blank" class="btn btn-info">Ver página</a>
-      </div>
-    </div>
+    <!-- Proyecto 2: AthleticPro -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
 
-    <div class="card">
-  <img src="images/bms.png" alt="Proyecto UMA Upgrade BMS">
-  <h3>Integración y automatización de UMA con Reliable Controls y BMS</h3>
-  <p class="fecha">diciembre 2025 - abril 2026</p>
-  <p>Proyecto de titulación desarrollado en ZF Electronic Systems: programación en RC Studio para control de horarios, ocupación, VFD y gestión de alarmas. Logró reducir el consumo energético en 10% y los costos por scrap en 8%</p>
-  <div class="tech-tags">
-    <span class="tag">RC Studio</span>
-    <span class="tag">Reliable Controls</span>
-    <span class="tag">BMS</span>
-    <span class="tag"><i class="devicon-autocad-plain colored"></i> AutoCAD</span>
-    <span class="tag"><i class="devicon-solidworks-plain colored"></i> Solidworks</span>
-    <span class="tag">VFD</span>
-    <span class="tag">Instrumentación</span>
-    <span class="tag">Automatización industrial</span>
-    <span class="tag">Control Basic</span>
-    <span class="tag">SAP (PM)</span>
-    <span class="tag">NPM/CEA</span>
-  </div>
-  <div class="links">
-    <a href="documentos/BMS UPGRADE UMA Project_Valeria Abigail Gzz Sada.pdf" target="_blank" class="btn btn-info">Ver PDF</a>
-  </div>
-</div>
+        <div class="flip-card-front">
+          <div class="card-preview">
+            <iframe src="https://landingpage-athleticpro.netlify.app" title="Athletic Pro"></iframe>
+          </div>
+          <div class="card-info">
+            <p class="categoria" data-es="Hackathon" data-en="Hackathon">Hackathon</p>
+            <h3 data-es="Landing page deportiva" data-en="Sports landing page">Landing page deportiva</h3>
+            <p class="descripcion" data-es="AthleticPro es una landing page de e-commerce deportivo enfocada en patinaje artístico, natación, atletismo y basketball, con carrito de compras y contacto integrados." data-en="AthleticPro is a sports e-commerce landing page focused on figure skating, swimming, athletics, and basketball, with an integrated shopping cart and contact form.">AthleticPro es una landing page de e-commerce deportivo enfocada en patinaje artístico, natación, atletismo y basketball, con carrito de compras y contacto integrados.</p>
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="images/faciflow.png" alt="Faci Flow">
-      <h3>Sistema de gestión de tickets con Power Apps</h3>
-      <p class="fecha">septiembre 2025 - noviembre 2025</p>
-      <p>Sistema de gestión de tickets con Power Apps para digitalizar el flujo de mantenimiento, procesando más de 240 órdenes mensuales. Integra Forms, Power Automate, SharePoint, Outlook y Power BI para trazabilidad y eficiencia en tiempo real.</p>
-      <div class="tech-tags">
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:microsoftexcel.svg?color=%23217346" class="tag-icon" alt="Excel"> Excel</span>
-        <span class="tag">Power Automate</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:powerbi.svg?color=%23F2C811" class="tag-icon" alt="Power BI"> Power BI</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:microsoftoutlook.svg?color=%230078D4" class="tag-icon" alt="Outlook"> Outlook</span>
-        <span class="tag">Microsoft Forms</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:microsoftsharepoint.svg?color=%23038387" class="tag-icon" alt="SharePoint"> Sharepoint</span>
-        <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
-    </div>
-       <div class="links">
-    <a href="documentos/Faci Flow proyecto.pdf" target="_blank" class="btn btn-info">Ver PDF</a>
-  </div>
-</div>
+        <div class="flip-card-back">
+          <p class="categoria" data-es="Tecnologías" data-en="Technologies">Tecnologías</p>
+          <div class="tech-tags">
+            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+            <span class="tag"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+            <span class="tag"><i class="devicon-figma-plain colored"></i> Figma</span>
+          </div>
+          <a href="https://landingpage-athleticpro.netlify.app" target="_blank" class="ver-demo" data-es="Ver sitio demo →" data-en="View demo →">Ver sitio demo →</a>
+          <a href="https://github.com/ValeAbi/Landing-page_Athletic-Pro" target="_blank" class="ver-demo" data-es="Repositorio →" data-en="Repository →">Repositorio →</a>
+        </div>
 
-    <div class="card">
-      <img src="images/ECOSYNCRA.png" alt="(ECOSYNCRA)">
-      <h3>Automatización y sostenibilidad: un sistema de riego y compostaje inteligente con ESP32 implementado en zona metropolitana de nuevo león</h3>
-       <p class="fecha">agosto 2025 - noviembre 2025</p>
-      <p>EcoSyncra es un sistema mecatrónico que automatiza el riego y el compostaje doméstico mediante sensores y un microcontrolador ESP32, con monitoreo remoto en un dashboard web. Busca reducir el consumo de agua, acelerar el compostaje y fomentar prácticas sostenibles en entornos urbanos.</p>
-      <div class="tech-tags">
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:espressif.svg?color=%23E7352C" class="tag-icon" alt="ESP32"> ESP32</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:solidworks.svg?color=%23FF0000" class="tag-icon" alt="SolidWorks"> SolidWorks</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:proteus.svg?color=%23007ACC" class="tag-icon" alt="Proteus"> Proteus</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:easyeda.svg?color=%23007ACC" class="tag-icon" alt="EasyEDA"> EasyEDA</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:kicad.svg?color=%23007ACC" class="tag-icon" alt="KiCad"> KiCad</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:visualstudiocode.svg?color=%23007ACC" class="tag-icon" alt="VSCode"> VSCode</span>
-        <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:micropython.svg?color=%23007ACC" class="tag-icon" alt="MicroPython"> MicroPython</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:matlab.svg?color=%23FF6600" class="tag-icon" alt="MATLAB"> MATLAB</span>
-        <span class="tag"><img src="https://api.iconify.design/simple-icons:miro.svg?color=%23FFD02F" class="tag-icon" alt="Miro"> Miro</span>
-  </div>
-      <div class="links">
-        <a href="documentos/ECOSYNCRA_Valeria Abigail Gzz Sada.pdf" target="_blank" class="btn btn-info">Ver PDF</a>
       </div>
     </div>
 
-    <div class="card">
-      <img src="images/esp.png" alt="Robot de fútbol teleoperado por medio del sensor mioeléctrico">
-      <h3>Robot de fútbol teleoperado por medio del sensor mioeléctrico AD8832</h3>
-      <p class="fecha">septiembre 2025 - noviembre 2025</p>
-      <p>Robot de fútbol gestual controlado mediante señales EMG y lógica difusa, con comunicación inalámbrica entre módulos ESP32. El sistema traduce la actividad muscular en comandos direccionales para mover el carrito y ejecutar jugadas, demostrando interacción humano–máquina aplicada al deporte.</p>
-      <div class="tech-tags">
-         <span class="tag"><img src="https://api.iconify.design/simple-icons:espressif.svg?color=%23E7352C" class="tag-icon" alt="ESP32"> ESP32</span>
-         <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
-         <span class="tag"><img src="https://api.iconify.design/simple-icons:micropython.svg?color=%23007ACC" class="tag-icon" alt="MicroPython"> MicroPython</span>
-         <span class="tag"><img src="https://api.iconify.design/simple-icons:solidworks.svg?color=%23FF0000" class="tag-icon" alt="SolidWorks"> SolidWorks</span>
-         <span class="tag"><img src="https://api.iconify.design/simple-icons:kicad.svg?color=%23007ACC" class="tag-icon" alt="KiCad"> KiCad</span>
-         <span class="tag">Scikit-Fuzzy</span>
-         <span class="tag">Sensor EMG AD8232</span>
-         <span class="tag">DRV8833</span>
-         <span class="tag">Motores DC TT</span>
-         <span class="tag">WiFi ESP-NOW</span>
-     </div>
- <div class="links">
-        <a href="https://github.com/ValeAbi/Proyecto-Robot-de-futbol-teleoperado-por-EMG_Valeria-Abigail-Gzz-Sada" target="_blank" class="btn btn-info">Repositorio</a>
-        <a href="documentos/ROBOT TELEOPERADO ESP32_Valeria Abigail Gzz Sada.pdf" target="_blank" class="btn btn-info">Ver PDF</a>
+    <!-- Proyecto 3: BMS UMA -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+
+        <div class="flip-card-front">
+          <img src="images/bms.png" alt="Proyecto UMA Upgrade BMS">
+          <div class="card-info">
+            <p class="categoria" data-es="Proyecto de titulación" data-en="Thesis project">Proyecto de titulación</p>
+            <h3 data-es="Integración y automatización de UMA" data-en="AHU Integration and Automation">Integración y automatización de UMA</h3>
+            <p class="descripcion" data-es="Desarrollado en ZF Electronic Systems: programación en RC Studio para control de horarios, ocupación, VFD y alarmas. Redujo el consumo energético en 10% y los costos por scrap en 8%." data-en="Developed at ZF Electronic Systems: RC Studio programming for schedule, occupancy, VFD, and alarm control. Reduced energy consumption by 10% and scrap costs by 8%.">Desarrollado en ZF Electronic Systems: programación en RC Studio para control de horarios, ocupación, VFD y alarmas. Redujo el consumo energético en 10% y los costos por scrap en 8%.</p>
+          </div>
+        </div>
+
+        <div class="flip-card-back">
+          <p class="categoria" data-es="Tecnologías" data-en="Technologies">Tecnologías</p>
+          <div class="tech-tags">
+            <span class="tag">RC Studio</span>
+            <span class="tag">Reliable Controls</span>
+            <span class="tag">BMS</span>
+            <span class="tag"><i class="devicon-autocad-plain colored"></i> AutoCAD</span>
+            <span class="tag"><i class="devicon-solidworks-plain colored"></i> Solidworks</span>
+            <span class="tag">VFD</span>
+            <span class="tag">Control Basic</span>
+            <span class="tag">SAP (PM)</span>
+          </div>
+          <a href="documentos/BMS UPGRADE UMA Project_Valeria Abigail Gzz Sada.pdf" target="_blank" class="ver-demo" data-es="Ver PDF →" data-en="View PDF →">Ver PDF →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Proyecto 4: Faci Flow -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+
+        <div class="flip-card-front">
+          <img src="images/faciflow.png" alt="Faci Flow">
+          <div class="card-info">
+            <p class="categoria" data-es="Proyecto profesional" data-en="Professional project">Proyecto profesional</p>
+            <h3 data-es="Sistema de gestión de tickets" data-en="Ticket management system">Sistema de gestión de tickets</h3>
+            <p class="descripcion" data-es="Power Apps para digitalizar el flujo de mantenimiento, procesando más de 240 órdenes mensuales, con Forms, Power Automate y Power BI." data-en="Power Apps to digitize the maintenance workflow, processing over 240 monthly orders, with Forms, Power Automate, and Power BI.">Power Apps para digitalizar el flujo de mantenimiento, procesando más de 240 órdenes mensuales, con Forms, Power Automate y Power BI.</p>
+          </div>
+        </div>
+
+        <div class="flip-card-back">
+          <p class="categoria" data-es="Tecnologías" data-en="Technologies">Tecnologías</p>
+          <div class="tech-tags">
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:microsoftexcel.svg?color=%23217346" class="tag-icon" alt="Excel"> Excel</span>
+            <span class="tag">Power Automate</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:powerbi.svg?color=%23F2C811" class="tag-icon" alt="Power BI"> Power BI</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:microsoftoutlook.svg?color=%230078D4" class="tag-icon" alt="Outlook"> Outlook</span>
+            <span class="tag">Microsoft Forms</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:microsoftsharepoint.svg?color=%23038387" class="tag-icon" alt="SharePoint"> Sharepoint</span>
+            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+          </div>
+          <a href="documentos/Faci Flow proyecto.pdf" target="_blank" class="ver-demo" data-es="Ver PDF →" data-en="View PDF →">Ver PDF →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Proyecto 5: EcoSyncra -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+
+        <div class="flip-card-front">
+          <img src="images/ECOSYNCRA.png" alt="(ECOSYNCRA)">
+          <div class="card-info">
+            <p class="categoria" data-es="Proyecto académico" data-en="Academic project">Proyecto académico</p>
+            <h3 data-es="EcoSyncra: riego y compostaje inteligente" data-en="EcoSyncra: smart irrigation and composting">EcoSyncra: riego y compostaje inteligente</h3>
+            <p class="descripcion" data-es="Sistema mecatrónico que automatiza el riego y el compostaje doméstico mediante sensores y ESP32, con monitoreo remoto en un dashboard web." data-en="Mechatronic system that automates home irrigation and composting using sensors and ESP32, with remote monitoring via a web dashboard.">Sistema mecatrónico que automatiza el riego y el compostaje doméstico mediante sensores y ESP32, con monitoreo remoto en un dashboard web.</p>
+          </div>
+        </div>
+
+        <div class="flip-card-back">
+          <p class="categoria" data-es="Tecnologías" data-en="Technologies">Tecnologías</p>
+          <div class="tech-tags">
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:espressif.svg?color=%23E7352C" class="tag-icon" alt="ESP32"> ESP32</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:solidworks.svg?color=%23FF0000" class="tag-icon" alt="SolidWorks"> SolidWorks</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:proteus.svg?color=%23007ACC" class="tag-icon" alt="Proteus"> Proteus</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:kicad.svg?color=%23007ACC" class="tag-icon" alt="KiCad"> KiCad</span>
+            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:micropython.svg?color=%23007ACC" class="tag-icon" alt="MicroPython"> MicroPython</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:matlab.svg?color=%23FF6600" class="tag-icon" alt="MATLAB"> MATLAB</span>
+          </div>
+          <a href="documentos/ECOSYNCRA_Valeria Abigail Gzz Sada.pdf" target="_blank" class="ver-demo" data-es="Ver PDF →" data-en="View PDF →">Ver PDF →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Proyecto 6: Robot EMG -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+
+        <div class="flip-card-front">
+          <img src="images/esp.png" alt="Robot de fútbol teleoperado por medio del sensor mioeléctrico">
+          <div class="card-info">
+            <p class="categoria" data-es="Proyecto académico" data-en="Academic project">Proyecto académico</p>
+            <h3 data-es="Robot de fútbol teleoperado por EMG" data-en="EMG teleoperated soccer robot">Robot de fútbol teleoperado por EMG</h3>
+            <p class="descripcion" data-es="Robot de fútbol gestual controlado mediante señales EMG y lógica difusa, con comunicación inalámbrica entre módulos ESP32." data-en="Gesture-controlled soccer robot operated via EMG signals and fuzzy logic, with wireless communication between ESP32 modules.">Robot de fútbol gestual controlado mediante señales EMG y lógica difusa, con comunicación inalámbrica entre módulos ESP32.</p>
+          </div>
+        </div>
+
+        <div class="flip-card-back">
+          <p class="categoria" data-es="Tecnologías" data-en="Technologies">Tecnologías</p>
+          <div class="tech-tags">
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:espressif.svg?color=%23E7352C" class="tag-icon" alt="ESP32"> ESP32</span>
+            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:micropython.svg?color=%23007ACC" class="tag-icon" alt="MicroPython"> MicroPython</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:solidworks.svg?color=%23FF0000" class="tag-icon" alt="SolidWorks"> SolidWorks</span>
+            <span class="tag"><img src="https://api.iconify.design/simple-icons:kicad.svg?color=%23007ACC" class="tag-icon" alt="KiCad"> KiCad</span>
+            <span class="tag">Scikit-Fuzzy</span>
+            <span class="tag">Sensor EMG AD8232</span>
+          </div>
+          <a href="https://github.com/ValeAbi/Proyecto-Robot-de-futbol-teleoperado-por-EMG_Valeria-Abigail-Gzz-Sada" target="_blank" class="ver-demo" data-es="Repositorio →" data-en="Repository →">Repositorio →</a>
+          <a href="documentos/ROBOT TELEOPERADO ESP32_Valeria Abigail Gzz Sada.pdf" target="_blank" class="ver-demo" data-es="Ver PDF →" data-en="View PDF →">Ver PDF →</a>
+        </div>
+
       </div>
     </div>
 
@@ -361,8 +435,8 @@
 
 <!--contacto-->
 <section id="contacto" class="contact-section">
-  <h2 class="text-center mb-2">Construyamos algo juntos</h2>
-  <p class="text-center contact-subtitle">
+  <h2 class="text-center mb-2" data-es="Construyamos algo juntos" data-en="Let's build something together">Construyamos algo juntos</h2>
+  <p class="text-center contact-subtitle" data-es="¿Buscas a alguien que combine ingeniería y tecnología para resolver problemas reales? Conversemos" data-en="Looking for someone who combines engineering and technology to solve real problems? Let's talk">
     ¿Buscas a alguien que combine ingeniería y tecnología para resolver problemas reales? Conversemos
   </p>
 
@@ -372,7 +446,7 @@
       <div class="contact-item">
         <span class="contact-icon">✉</span>
         <div>
-          <p class="contact-label">Correo</p>
+          <p class="contact-label" data-es="Correo" data-en="Email">Correo</p>
           <a href="mailto:valeriagonzalezsada@gmail.com">valeriagonzalezsada@gmail.com</a>
         </div>
       </div>
@@ -380,7 +454,7 @@
       <div class="contact-item">
         <span class="contact-icon">☎</span>
         <div>
-          <p class="contact-label">Teléfono</p>
+          <p class="contact-label" data-es="Teléfono" data-en="Phone">Teléfono</p>
           <a href="tel:+528124271319">+52 812 427 1319</a>
         </div>
       </div>
@@ -388,7 +462,7 @@
       <div class="contact-item">
         <span class="contact-icon">in</span>
         <div>
-          <p class="contact-label">LinkedIn</p>
+          <p class="contact-label" data-es="LinkedIn" data-en="LinkedIn">LinkedIn</p>
           <a href="https://linkedin.com/in/valeriagonzalezsada" target="_blank">/valeriagonzalezsada</a>
         </div>
       </div>
@@ -396,8 +470,8 @@
       <div class="contact-item">
         <span class="contact-icon">📍</span>
         <div>
-          <p class="contact-label">Ubicación</p>
-          <p>Nuevo León, México</p>
+          <p class="contact-label" data-es="Ubicación" data-en="Location">Ubicación</p>
+          <p data-es="Nuevo León, México" data-en="Nuevo León, Mexico">Nuevo León, México</p>
         </div>
       </div>
     </div>
@@ -405,21 +479,21 @@
     <!-- Formulario con Formspree -->
     <form action="https://formspree.io/f/mjyvygzv" method="POST" class="contact-form">
       <div class="form-group">
-        <label for="nombre">Nombre</label>
+        <label for="nombre" data-es="Nombre" data-en="Name">Nombre</label>
         <input type="text" id="nombre" name="name" required>
       </div>
 
       <div class="form-group">
-        <label for="correo">Correo</label>
+        <label for="correo" data-es="Correo" data-en="Email">Correo</label>
         <input type="email" id="correo" name="email" required>
       </div>
 
       <div class="form-group">
-        <label for="mensaje">Mensaje</label>
+        <label for="mensaje" data-es="Mensaje" data-en="Message">Mensaje</label>
         <textarea id="mensaje" name="message" rows="3" required></textarea>
       </div>
 
-      <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      <button type="submit" class="btn-enviar" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
     </form>
 
   </div>
@@ -427,29 +501,78 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 Valeria Abigail González Sada | Portafolio Personal |Nuevo León, México</p>
-    <p>Optimizo procesos, diseño soluciones</p>
+    <p><span data-es="© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México" data-en="© 2026 Valeria Abigail González Sada | Personal Portfolio | Nuevo León, Mexico">© 2026 Valeria Abigail González Sada | Portafolio Personal |Nuevo León, México</span></p>
+    <p data-es="Optimizo procesos, diseño soluciones" data-en="I optimize processes, I design solutions">Optimizo procesos, diseño soluciones</p>
     <p>
-    <a href="mailto:valeriagonzalezsada@gmail.com">Correo</a> |
+    <a href="mailto:valeriagonzalezsada@gmail.com" data-es="Correo" data-en="Email">Correo</a> |
     <a href="https://github.com/ValeAbi" target="_blank">GitHub</a> |
     <a href="https://linkedin.com/in/valeriagonzalezsada" target="_blank">LinkedIn</a>
-    <a href="tel:+528124271319" target="_blank">Telefono</a>
+    <a href="tel:+528124271319" target="_blank" data-es="Telefono" data-en="Phone">Telefono</a>
     </p>
 
-    <a href="index.html#inicio" class="back-to-top">Volver al inicio ↑</a>
+    <a href="index.html#inicio" class="back-to-top" data-es="Volver al inicio ↑" data-en="Back to top ↑">Volver al inicio ↑</a>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Evita el fondo negro del iframe al voltear las flip-cards -->
   <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-        'google_translate_element'
-      );
-    }
+    document.querySelectorAll('.flip-card').forEach(card => {
+      const iframe = card.querySelector('iframe');
+      if (iframe) {
+        card.addEventListener('mouseenter', () => { iframe.style.visibility = 'hidden'; });
+        card.addEventListener('mouseleave', () => { iframe.style.visibility = 'visible'; });
+      }
+    });
   </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Animación de aparición de las columnas de Skills -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const skillsCols = document.querySelectorAll('.skills-column');
+      const skillsObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 100);
+            skillsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      skillsCols.forEach(col => skillsObserver.observe(col));
+    });
+  </script>
+
+  <!-- Selector de idioma ES/EN -->
+  <script>
+    const knob = document.getElementById('knob');
+    const opES = document.getElementById('opt-es');
+    const opEN = document.getElementById('opt-en');
+    let idiomaActual = 'es';
+
+    function actualizarVisual() {
+      if (idiomaActual === 'es') {
+        knob.style.transform = 'translateX(0)';
+        opES.classList.add('activa');
+        opEN.classList.remove('activa');
+      } else {
+        knob.style.transform = 'translateX(68px)';
+        opEN.classList.add('activa');
+        opES.classList.remove('activa');
+      }
+    }
+
+    function traducir() {
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${idiomaActual}`);
+      });
+      document.querySelectorAll('[data-es-html]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${idiomaActual}-html`);
+      });
+    }
+
+    opES.addEventListener('click', () => { idiomaActual = 'es'; actualizarVisual(); traducir(); });
+    opEN.addEventListener('click', () => { idiomaActual = 'en'; actualizarVisual(); traducir(); });
+  </script>
 
 </body>
 </html>

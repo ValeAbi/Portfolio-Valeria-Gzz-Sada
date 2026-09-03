@@ -10,6 +10,34 @@
 </head>
 <body>
 
+  <div class="circuit-bg" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="circuitPattern" width="220" height="220" patternUnits="userSpaceOnUse">
+          <path class="circuit-trace flow" d="M10 10 H110 V80 H200" />
+          <path class="circuit-trace" d="M0 150 H60 V210" />
+          <path class="circuit-trace flow" d="M150 0 V60 H220" />
+          <path class="circuit-trace" d="M180 120 H120 V180 H40" />
+          <circle class="circuit-node n1" cx="110" cy="80" r="3" />
+          <circle class="circuit-node n2" cx="60" cy="210" r="3" />
+          <circle class="circuit-node n3" cx="150" cy="60" r="3" />
+          <circle class="circuit-node n4" cx="120" cy="180" r="3" />
+          <circle class="circuit-node n5" cx="10" cy="10" r="2.2" />
+          <circle class="circuit-node n6" cx="220" cy="60" r="2.2" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+    </svg>
+  </div>
+
+  <div class="selector-idioma">
+    <div class="toggle-idioma">
+      <div id="knob" class="knob"></div>
+      <button id="opt-es" class="opcion activa">ES</button>
+      <button id="opt-en" class="opcion">EN</button>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1E3A8A;">
     <div class="container-fluid">
@@ -19,20 +47,20 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#portafolio">Portafolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#habilidades">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Acerca de mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#habilidades" data-es="Skills" data-en="Skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-es="Acerca de mí" data-en="About me">Acerca de mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html" data-es="CV" data-en="Resume">CV</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html" data-es="Blog" data-en="Blog">Blog</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main class="page-content">
-  <h1 class="text-center">Blog</h1>
-  <p class="text-center blog-intro">Próximamente compartiré aquí artículos sobre automatización, desarrollo de software y los proyectos en los que estoy trabajando. Este es el primer tema que viene:</p>
+  <h1 class="text-center" data-es="Blog" data-en="Blog">Blog</h1>
+  <p class="text-center blog-intro" data-es="Próximamente compartiré aquí artículos sobre automatización, desarrollo de software y los proyectos en los que estoy trabajando. Este es el primer tema que viene:" data-en="Soon I'll be sharing articles here about automation, software development, and the projects I'm working on. Here's the first topic coming up:">Próximamente compartiré aquí artículos sobre automatización, desarrollo de software y los proyectos en los que estoy trabajando. Este es el primer tema que viene:</p>
 
   <div class="blog-grid">
 
@@ -43,13 +71,13 @@
          <img src="images/val3.jpeg" alt="Ponencia 3">
      </div>
       <div class="blog-card-content">
-        <span class="blog-tag">Próximamente</span>
-        <h4>Lo que aprendí dando la ponencia de motivación a estudiantes de prepa técnica.</h4>
-        <p> Hace unas semanas tuve la oportunidad de regresar a las aulas, pero esta vez del otro lado: como ponente. Fui invitada al CBTIS para dar una charla de orientación vocacional a estudiantes de preparatoria técnica, con el objetivo de platicarles sobre las carreras de ingeniería y, sobre todo, de motivarlos a seguir estudiando.</p>
-        <p>Empecé la conferencia hablando de algo que sé que muchos de ellos sienten en algún momento: la duda de si vale la pena seguir estudiando, el cansancio, o simplemente no saber qué carrera elegir. Yo siempre supe que quería estudiar, y quise usar esa certeza como punto de partida para mostrarles que, aunque el camino no siempre es igual para todos, sí es posible encontrar algo que te apasione y sostenga esa motivación en el tiempo.</p>
-        <p>A partir de ahí, les compartí mi trayectoria académica y profesional: cómo decidí estudiar Ingeniería Mecatrónica, los retos que enfrenté en el camino, y cómo esa decisión me llevó a proyectos que hoy me llenan de orgullo —desde automatizar sistemas en la industria hasta desarrollar soluciones de software. Hablamos de lo que significa formar parte del grupo de excelencia académica de los 100 mejores estudiantes de FIME, no como algo inalcanzable, sino como el resultado de constancia y disciplina.</p>
-        <p>Lo que más me emocionó fue ver cómo, conforme avanzaba la plática, los chicos empezaban a hacer preguntas, a compartir sus propias dudas sobre qué estudiar o si estudiar siquiera valía la pena. Hablamos de que la ingeniería no es un solo camino, sino un mundo de posibilidades: automatización, desarrollo, diseño, gestión de proyectos. Que no tienes que tenerlo todo resuelto a los 18 años, pero que vale la pena intentarlo.</p>
-        <p>Al final de la sesión, varios estudiantes se acercaron a platicarme que la charla los había motivado a seguir adelante con sus estudios, algunos incluso decididos a explorar carreras de ingeniería que antes no habían considerado. Fue un recordatorio de lo poderoso que puede ser compartir nuestra propia historia para que alguien más encuentre la motivación que necesitaba.</p>
+        <span class="blog-tag" data-es="Próximamente" data-en="Coming soon">Próximamente</span>
+        <h4 data-es="Lo que aprendí dando la ponencia de motivación a estudiantes de prepa técnica." data-en="What I learned giving a motivational talk to technical high school students.">Lo que aprendí dando la ponencia de motivación a estudiantes de prepa técnica.</h4>
+        <p data-es="Hace unas semanas tuve la oportunidad de regresar a las aulas, pero esta vez del otro lado: como ponente. Fui invitada al CBTIS para dar una charla de orientación vocacional a estudiantes de preparatoria técnica, con el objetivo de platicarles sobre las carreras de ingeniería y, sobre todo, de motivarlos a seguir estudiando." data-en="A few weeks ago I had the chance to go back to the classroom, but this time on the other side: as the speaker. I was invited to CBTIS to give a career guidance talk to technical high school students, with the goal of telling them about engineering careers and, above all, motivating them to keep studying.">Hace unas semanas tuve la oportunidad de regresar a las aulas, pero esta vez del otro lado: como ponente. Fui invitada al CBTIS para dar una charla de orientación vocacional a estudiantes de preparatoria técnica, con el objetivo de platicarles sobre las carreras de ingeniería y, sobre todo, de motivarlos a seguir estudiando.</p>
+        <p data-es="Empecé la conferencia hablando de algo que sé que muchos de ellos sienten en algún momento: la duda de si vale la pena seguir estudiando, el cansancio, o simplemente no saber qué carrera elegir. Yo siempre supe que quería estudiar, y quise usar esa certeza como punto de partida para mostrarles que, aunque el camino no siempre es igual para todos, sí es posible encontrar algo que te apasione y sostenga esa motivación en el tiempo." data-en="I started the talk by addressing something I know many of them feel at some point: the doubt about whether it's worth continuing to study, the exhaustion, or simply not knowing which career to choose. I always knew I wanted to study, and I wanted to use that certainty as a starting point to show them that, even though the path isn't the same for everyone, it is possible to find something you're passionate about that sustains that motivation over time.">Empecé la conferencia hablando de algo que sé que muchos de ellos sienten en algún momento: la duda de si vale la pena seguir estudiando, el cansancio, o simplemente no saber qué carrera elegir. Yo siempre supe que quería estudiar, y quise usar esa certeza como punto de partida para mostrarles que, aunque el camino no siempre es igual para todos, sí es posible encontrar algo que te apasione y sostenga esa motivación en el tiempo.</p>
+        <p data-es="A partir de ahí, les compartí mi trayectoria académica y profesional: cómo decidí estudiar Ingeniería Mecatrónica, los retos que enfrenté en el camino, y cómo esa decisión me llevó a proyectos que hoy me llenan de orgullo —desde automatizar sistemas en la industria hasta desarrollar soluciones de software. Hablamos de lo que significa formar parte del grupo de excelencia académica de los 100 mejores estudiantes de FIME, no como algo inalcanzable, sino como el resultado de constancia y disciplina." data-en="From there, I shared my academic and professional journey: how I decided to study Mechatronics Engineering, the challenges I faced along the way, and how that decision led me to projects I'm proud of today — from automating industrial systems to developing software solutions. We talked about what it means to be part of FIME's top 100 academic excellence group, not as something unreachable, but as the result of consistency and discipline.">A partir de ahí, les compartí mi trayectoria académica y profesional: cómo decidí estudiar Ingeniería Mecatrónica, los retos que enfrenté en el camino, y cómo esa decisión me llevó a proyectos que hoy me llenan de orgullo —desde automatizar sistemas en la industria hasta desarrollar soluciones de software. Hablamos de lo que significa formar parte del grupo de excelencia académica de los 100 mejores estudiantes de FIME, no como algo inalcanzable, sino como el resultado de constancia y disciplina.</p>
+        <p data-es="Lo que más me emocionó fue ver cómo, conforme avanzaba la plática, los chicos empezaban a hacer preguntas, a compartir sus propias dudas sobre qué estudiar o si estudiar siquiera valía la pena. Hablamos de que la ingeniería no es un solo camino, sino un mundo de posibilidades: automatización, desarrollo, diseño, gestión de proyectos. Que no tienes que tenerlo todo resuelto a los 18 años, pero que vale la pena intentarlo." data-en="What excited me most was seeing how, as the talk went on, the students started asking questions, sharing their own doubts about what to study or whether studying was even worth it. We talked about how engineering isn't just one path, but a world of possibilities: automation, development, design, project management. That you don't have to have it all figured out at 18, but that it's worth trying.">Lo que más me emocionó fue ver cómo, conforme avanzaba la plática, los chicos empezaban a hacer preguntas, a compartir sus propias dudas sobre qué estudiar o si estudiar siquiera valía la pena. Hablamos de que la ingeniería no es un solo camino, sino un mundo de posibilidades: automatización, desarrollo, diseño, gestión de proyectos. Que no tienes que tenerlo todo resuelto a los 18 años, pero que vale la pena intentarlo.</p>
+        <p data-es="Al final de la sesión, varios estudiantes se acercaron a platicarme que la charla los había motivado a seguir adelante con sus estudios, algunos incluso decididos a explorar carreras de ingeniería que antes no habían considerado. Fue un recordatorio de lo poderoso que puede ser compartir nuestra propia historia para que alguien más encuentre la motivación que necesitaba." data-en="At the end of the session, several students came up to tell me the talk had motivated them to keep going with their studies, some even decided to explore engineering careers they hadn't considered before. It was a reminder of how powerful it can be to share our own story so someone else can find the motivation they needed.">Al final de la sesión, varios estudiantes se acercaron a platicarme que la charla los había motivado a seguir adelante con sus estudios, algunos incluso decididos a explorar carreras de ingeniería que antes no habían considerado. Fue un recordatorio de lo poderoso que puede ser compartir nuestra propia historia para que alguien más encuentre la motivación que necesitaba.</p>
       </div>
     </div>
 
@@ -58,16 +86,49 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 Valeria Abigail González Sada | Portafolio Personal | Guadalupe, Nuevo León, México</p>
-    <p>Optimizo procesos, diseño soluciones</p>
+    <p><span data-es="© 2026 Valeria Abigail González Sada | Portafolio Personal | Guadalupe, Nuevo León, México" data-en="© 2026 Valeria Abigail González Sada | Personal Portfolio | Guadalupe, Nuevo León, Mexico">© 2026 Valeria Abigail González Sada | Portafolio Personal | Guadalupe, Nuevo León, México</span></p>
+    <p data-es="Optimizo procesos, diseño soluciones" data-en="I optimize processes, I design solutions">Optimizo procesos, diseño soluciones</p>
     <p>
-    <a href="mailto:valeriagonzalezsada@gmail.com">Correo</a> |
+    <a href="mailto:valeriagonzalezsada@gmail.com" data-es="Correo" data-en="Email">Correo</a> |
     <a href="https://github.com/ValeAbi" target="_blank">GitHub</a> |
     <a href="https://linkedin.com/in/valeriagonzalezsada" target="_blank">LinkedIn</a>
-    <a href="tel:+528124271319" target="_blank">Telefono</a>
+    <a href="tel:+528124271319" target="_blank" data-es="Telefono" data-en="Phone">Telefono</a>
     </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Selector de idioma ES/EN -->
+  <script>
+    const knob = document.getElementById('knob');
+    const opES = document.getElementById('opt-es');
+    const opEN = document.getElementById('opt-en');
+    let idiomaActual = 'es';
+
+    function actualizarVisual() {
+      if (idiomaActual === 'es') {
+        knob.style.transform = 'translateX(0)';
+        opES.classList.add('activa');
+        opEN.classList.remove('activa');
+      } else {
+        knob.style.transform = 'translateX(68px)';
+        opEN.classList.add('activa');
+        opES.classList.remove('activa');
+      }
+    }
+
+    function traducir() {
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${idiomaActual}`);
+      });
+      document.querySelectorAll('[data-es-html]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${idiomaActual}-html`);
+      });
+    }
+
+    opES.addEventListener('click', () => { idiomaActual = 'es'; actualizarVisual(); traducir(); });
+    opEN.addEventListener('click', () => { idiomaActual = 'en'; actualizarVisual(); traducir(); });
+  </script>
+
 </body>
 </html>

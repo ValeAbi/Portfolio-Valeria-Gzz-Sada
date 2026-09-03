@@ -10,6 +10,34 @@
 </head>
 <body>
 
+  <div class="circuit-bg" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="circuitPattern" width="220" height="220" patternUnits="userSpaceOnUse">
+          <path class="circuit-trace flow" d="M10 10 H110 V80 H200" />
+          <path class="circuit-trace" d="M0 150 H60 V210" />
+          <path class="circuit-trace flow" d="M150 0 V60 H220" />
+          <path class="circuit-trace" d="M180 120 H120 V180 H40" />
+          <circle class="circuit-node n1" cx="110" cy="80" r="3" />
+          <circle class="circuit-node n2" cx="60" cy="210" r="3" />
+          <circle class="circuit-node n3" cx="150" cy="60" r="3" />
+          <circle class="circuit-node n4" cx="120" cy="180" r="3" />
+          <circle class="circuit-node n5" cx="10" cy="10" r="2.2" />
+          <circle class="circuit-node n6" cx="220" cy="60" r="2.2" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+    </svg>
+  </div>
+
+  <div class="selector-idioma">
+    <div class="toggle-idioma">
+      <div id="knob" class="knob"></div>
+      <button id="opt-es" class="opcion activa">ES</button>
+      <button id="opt-en" class="opcion">EN</button>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1E3A8A;">
     <div class="container-fluid">
@@ -19,12 +47,12 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#portafolio">Portafolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#habilidades">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Acerca de mí</a></li>
-          <li class="nav-item"><a class="nav-link active" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#habilidades" data-es="Skills" data-en="Skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-es="Acerca de mí" data-en="About me">Acerca de mí</a></li>
+          <li class="nav-item"><a class="nav-link active" href="cv.html" data-es="CV" data-en="Resume">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html" data-es="Blog" data-en="Blog">Blog</a></li>
         </ul>
       </div>
     </div>
@@ -32,25 +60,25 @@
 
   <!--cv-->
   <main class="page-content text-center">
-    <h1>Curriculum Vitae</h1>
-    <p>
+    <h1 data-es="Curriculum Vitae" data-en="Resume">Curriculum Vitae</h1>
+    <p data-es="Aquí puedes descargar mi CV en PDF o consultar un resumen rápido de mi experiencia y formación." data-en="Here you can download my resume as a PDF or check a quick summary of my experience and education.">
       Aquí puedes descargar mi CV en PDF o consultar un resumen rápido de mi experiencia y formación.
     </p>
 
-    <a href="documentos/CV-Valeria-Sada.pdf" download class="btn btn-success mb-5 me-2">Descargar CV (PDF)</a>
-    <a href="documentos/CV-Valeria-Sada.pdf" target="_blank" class="btn btn-success mb-5">Ver CV en línea</a>
+    <a href="documentos/CV-Valeria-Sada.pdf" download class="btn btn-success mb-5 me-2" data-es="Descargar CV (PDF)" data-en="Download Resume (PDF)">Descargar CV (PDF)</a>
+    <a href="documentos/CV-Valeria-Sada.pdf" target="_blank" class="btn btn-success mb-5" data-es="Ver CV en línea" data-en="View resume online">Ver CV en línea</a>
 
     <div class="text-start">
-  <h4 class="mt-4" style="color: var(--azul-electrico);">Formación</h4>
+  <h4 class="mt-4" style="color: var(--azul-electrico);" data-es="Formación" data-en="Education">Formación</h4>
 
   <div class="cv-card">
     <img src="images/Generation.png" alt="Generation" class="cv-logo">
     <span class="cv-numero">01</span>
     <div class="cv-contenido">
-      <p class="cv-institución">Bootcamp Generation México</p>
-      <p class="cv-puesto">Desarrolladora java full stack</p>
-      <p class="cv-periodo">julio 2026 - octubre 2026</p>
-      <p>Programa intensivo de empleabilidad enfocado en desarrollo de software, combinando habilidades técnicas y profesionales.</p>
+      <p class="cv-institucion">Bootcamp Generation México</p>
+      <p class="cv-puesto" data-es="Desarrolladora java full stack" data-en="Java Full Stack Developer">Desarrolladora java full stack</p>
+      <p class="cv-periodo" data-es="julio 2026 - octubre 2026" data-en="July 2026 - October 2026">julio 2026 - octubre 2026</p>
+      <p data-es="Programa intensivo de empleabilidad enfocado en desarrollo de software, combinando habilidades técnicas y profesionales." data-en="Intensive employability program focused on software development, combining technical and professional skills.">Programa intensivo de empleabilidad enfocado en desarrollo de software, combinando habilidades técnicas y profesionales.</p>
     </div>
   </div>
 
@@ -58,11 +86,11 @@
     <img src="images/fime.png" alt="FIME" class="cv-logo">
     <span class="cv-numero">02</span>
     <div class="cv-contenido">
-      <p class="cv-institución">Facultad de Ingeniería Mecánica y Eléctrica</p>
-      <p class="cv-profesión">Ingeniería en Mecatrónica</p>
-      <p class="cv-periodo">agosto 2021 - junio 2026</p>
-      <p>Grupo de excelencia académica, top 100 mejores estudiantes, sociedad estudiantil de Mecatrónica.</p>
-      <p>En proceso de titulación.</p>
+      <p class="cv-institucion" data-es="Facultad de Ingeniería Mecánica y Eléctrica" data-en="Faculty of Mechanical and Electrical Engineering">Facultad de Ingeniería Mecánica y Eléctrica</p>
+      <p class="cv-profesion" data-es="Ingeniería en Mecatrónica" data-en="Mechatronics Engineering">Ingeniería en Mecatrónica</p>
+      <p class="cv-periodo" data-es="agosto 2021 - junio 2026" data-en="August 2021 - June 2026">agosto 2021 - junio 2026</p>
+      <p data-es="Grupo de excelencia académica, top 100 mejores estudiantes, sociedad estudiantil de Mecatrónica." data-en="Academic excellence group, top 100 best students, Mechatronics student society.">Grupo de excelencia académica, top 100 mejores estudiantes, sociedad estudiantil de Mecatrónica.</p>
+      <p data-es="En proceso de titulación." data-en="Currently completing degree requirements.">En proceso de titulación.</p>
     </div>
   </div>
 
@@ -70,10 +98,10 @@
     <img src="images/p4hbionics.png" alt="p4hbionics" class="cv-logo">
     <span class="cv-numero">03</span>
     <div class="cv-contenido">
-      <p class="cv-institución">P4HBionics</p>
-      <p class="cv-profesión">Cursos especializados en tecnología biónica</p>
-      <p class="cv-periodo">octubre 2024 - actualidad</p>
-      <p>Diplomado en Tecnología Biónica Avanzada, con enfoque en diseño de prótesis, sensores y sistemas de control biónico.</p>
+      <p class="cv-institucion">P4HBionics</p>
+      <p class="cv-profesion" data-es="Cursos especializados en tecnología biónica" data-en="Specialized courses in bionic technology">Cursos especializados en tecnología biónica</p>
+      <p class="cv-periodo" data-es="octubre 2024 - actualidad" data-en="October 2024 - present">octubre 2024 - actualidad</p>
+      <p data-es="Diplomado en Tecnología Biónica Avanzada, con enfoque en diseño de prótesis, sensores y sistemas de control biónico." data-en="Diploma in Advanced Bionic Technology, focused on prosthetic design, sensors, and bionic control systems.">Diplomado en Tecnología Biónica Avanzada, con enfoque en diseño de prótesis, sensores y sistemas de control biónico.</p>
     </div>
   </div>
 
@@ -81,31 +109,31 @@
     <img src="images/bedutecn.jpg" alt="bedutecn" class="cv-logo">
     <span class="cv-numero">04</span>
     <div class="cv-contenido">
-      <p class="cv-institución">Bedu Technolochicas</p>
-      <p class="cv-profesión">Ciencia de datos</p>
-      <p class="cv-periodo">octubre 2024 - febrero 2025</p>
-      <p>Especialización intensiva de recopilación, procesamiento y análisis de grandes volúmenes de información mediante el uso de código avanzado.</p>
+      <p class="cv-institucion">Bedu Technolochicas</p>
+      <p class="cv-profesion" data-es="Ciencia de datos" data-en="Data Science">Ciencia de datos</p>
+      <p class="cv-periodo" data-es="octubre 2024 - febrero 2025" data-en="October 2024 - February 2025">octubre 2024 - febrero 2025</p>
+      <p data-es="Especialización intensiva de recopilación, procesamiento y análisis de grandes volúmenes de información mediante el uso de código avanzado." data-en="Intensive specialization in the collection, processing, and analysis of large volumes of data using advanced code.">Especialización intensiva de recopilación, procesamiento y análisis de grandes volúmenes de información mediante el uso de código avanzado.</p>
     </div>
   </div>
 
-  <h4 class="mt-4" style="color: var(--azul-electrico);">Experiencia</h4>
+  <h4 class="mt-4" style="color: var(--azul-electrico);" data-es="Experiencia" data-en="Experience">Experiencia</h4>
 
   <div class="cv-card">
     <img src="images/zf.png" alt="zf" class="cv-logo">
     <span class="cv-numero">01</span>
     <div class="cv-contenido">
-      <p class="cv-institución">ZF Electronic Systems Monterrey</p>
-      <p class="cv-puesto">Practicante EHS y Facilities</p>
-      <p class="cv-periodo">junio 2025 - junio 2026</p>
+      <p class="cv-institucion">ZF Electronic Systems Monterrey</p>
+      <p class="cv-puesto" data-es="Practicante EHS y Facilities" data-en="EHS and Facilities Intern">Practicante EHS y Facilities</p>
+      <p class="cv-periodo" data-es="junio 2025 - junio 2026" data-en="June 2025 - June 2026">junio 2025 - junio 2026</p>
       <ul>
-        <li>Desarrollé un sistema automatizado de gestión de tickets, digitalizando el flujo de mantenimiento y procesando más de 240 órdenes, lo que mejoró la trazabilidad y eficiencia del proceso .</li>
-        <li>Lideré el proyecto de automatización de programación para UMA con Control Basic y BMS, con el objetivo de reducir el consumo energético del variador de frecuencia en un 10% y el scrap en un 8% anualmente.</li>
-        <li>Gestioné planes de mantenimiento, órdenes de trabajo y tareas en SAP (módulos PM y MM), implementando una sábana de mantenimiento con costos y planeación, y optimizando el módulo de compras para agilizar el proceso de órdenes de compra.</li>
-        <li>Elaboré documentación técnica para actividades de validación de componentes, aplicando código, diagramas de flujo y de control, así como estándares NPM y CEA</li>
-        <li>Capacité a múltiples contratistas mediante inducciones y lideré proyectos de la comisión mixta de seguridad, colaborando con equipos y líderes de múltiples departamentos</li>
-        <li>Programé en Power BI usando Python para mejorar el monitoreo de variables mediante dashboards</li>
-        <li>Apliqué herramientas de IA (Copilot) en la validación y seguimiento de documentación técnica</li>
-        <li>Implementé capacitación como brigadista en 4 brigadas: primeros auxilios, combate contra incendios, búsqueda y rescate y evacuación.</li>
+        <li data-es="Desarrollé un sistema automatizado de gestión de tickets, digitalizando el flujo de mantenimiento y procesando más de 240 órdenes, lo que mejoró la trazabilidad y eficiencia del proceso." data-en="Developed an automated ticket management system, digitizing the maintenance workflow and processing over 240 orders, which improved process traceability and efficiency.">Desarrollé un sistema automatizado de gestión de tickets, digitalizando el flujo de mantenimiento y procesando más de 240 órdenes, lo que mejoró la trazabilidad y eficiencia del proceso.</li>
+        <li data-es="Lideré el proyecto de automatización de programación para UMA con Control Basic y BMS, con el objetivo de reducir el consumo energético del variador de frecuencia en un 10% y el scrap en un 8% anualmente." data-en="Led the AHU programming automation project using Control Basic and BMS, aiming to reduce VFD energy consumption by 10% and scrap by 8% annually.">Lideré el proyecto de automatización de programación para UMA con Control Basic y BMS, con el objetivo de reducir el consumo energético del variador de frecuencia en un 10% y el scrap en un 8% anualmente.</li>
+        <li data-es="Gestioné planes de mantenimiento, órdenes de trabajo y tareas en SAP (módulos PM y MM), implementando una sábana de mantenimiento con costos y planeación, y optimizando el módulo de compras para agilizar el proceso de órdenes de compra." data-en="Managed maintenance plans, work orders, and tasks in SAP (PM and MM modules), implementing a maintenance tracking sheet with costs and planning, and optimizing the purchasing module to speed up the purchase order process.">Gestioné planes de mantenimiento, órdenes de trabajo y tareas en SAP (módulos PM y MM), implementando una sábana de mantenimiento con costos y planeación, y optimizando el módulo de compras para agilizar el proceso de órdenes de compra.</li>
+        <li data-es="Elaboré documentación técnica para actividades de validación de componentes, aplicando código, diagramas de flujo y de control, así como estándares NPM y CEA." data-en="Prepared technical documentation for component validation activities, applying code, flow and control diagrams, as well as NPM and CEA standards.">Elaboré documentación técnica para actividades de validación de componentes, aplicando código, diagramas de flujo y de control, así como estándares NPM y CEA.</li>
+        <li data-es="Capacité a múltiples contratistas mediante inducciones y lideré proyectos de la comisión mixta de seguridad, colaborando con equipos y líderes de múltiples departamentos." data-en="Trained multiple contractors through onboarding sessions and led joint safety committee projects, collaborating with teams and leaders across multiple departments.">Capacité a múltiples contratistas mediante inducciones y lideré proyectos de la comisión mixta de seguridad, colaborando con equipos y líderes de múltiples departamentos.</li>
+        <li data-es="Programé en Power BI usando Python para mejorar el monitoreo de variables mediante dashboards." data-en="Programmed in Power BI using Python to improve variable monitoring through dashboards.">Programé en Power BI usando Python para mejorar el monitoreo de variables mediante dashboards.</li>
+        <li data-es="Apliqué herramientas de IA (Copilot) en la validación y seguimiento de documentación técnica." data-en="Applied AI tools (Copilot) for validating and tracking technical documentation.">Apliqué herramientas de IA (Copilot) en la validación y seguimiento de documentación técnica.</li>
+        <li data-es="Implementé capacitación como brigadista en 4 brigadas: primeros auxilios, combate contra incendios, búsqueda y rescate y evacuación." data-en="Completed training as an emergency response team member in 4 brigades: first aid, firefighting, search and rescue, and evacuation.">Implementé capacitación como brigadista en 4 brigadas: primeros auxilios, combate contra incendios, búsqueda y rescate y evacuación.</li>
       </ul>
     </div>
   </div>
@@ -114,13 +142,13 @@
     <img src="images/clinica.png" alt="clinica" class="cv-logo">
     <span class="cv-numero">02</span>
     <div class="cv-contenido">
-      <p class="cv-institución">Secretaría de Salud - Clinica Médica Municipal Guadalupe</p>
-      <p class="cv-puesto">Practicante servicio social en dirección</p>
-      <p class="cv-periodo">diciembre 2024 - mayo 2025</p>
+      <p class="cv-institucion" data-es="Secretaría de Salud - Clinica Médica Municipal Guadalupe" data-en="Ministry of Health - Guadalupe Municipal Medical Clinic">Secretaría de Salud - Clinica Médica Municipal Guadalupe</p>
+      <p class="cv-puesto" data-es="Practicante servicio social en dirección" data-en="Social Service Intern - Management">Practicante servicio social en dirección</p>
+      <p class="cv-periodo" data-es="diciembre 2024 - mayo 2025" data-en="December 2024 - May 2025">diciembre 2024 - mayo 2025</p>
       <ul>
-        <li>Lideré proyectos de campañas de salud</li>
-        <li>Capacité al personal mediante inducciones en el uso de herramientas como Excel, Microsoft Office y Canva, así como en documentación de seguimiento y elaboración de reporte.</li>
-        <li>Revisé con constante orientación.<li>
+        <li data-es="Lideré proyectos de campañas de salud." data-en="Led health campaign projects.">Lideré proyectos de campañas de salud</li>
+        <li data-es="Capacité al personal mediante inducciones en el uso de herramientas como Excel, Microsoft Office y Canva, así como en documentación de seguimiento y elaboración de reporte." data-en="Trained staff through onboarding sessions on tools such as Excel, Microsoft Office, and Canva, as well as follow-up documentation and report writing.">Capacité al personal mediante inducciones en el uso de herramientas como Excel, Microsoft Office y Canva, así como en documentación de seguimiento y elaboración de reporte.</li>
+        <li data-es="Revisé con constante orientación." data-en="Reviewed work with constant guidance.">Revisé con constante orientación.</li>
       </ul>
     </div>
   </div>
@@ -129,16 +157,49 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México</p>
-    <p>Optimizo procesos, diseño soluciones</p>
+    <p><span data-es="© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México" data-en="© 2026 Valeria Abigail González Sada | Personal Portfolio | Nuevo León, Mexico">© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México</span></p>
+    <p data-es="Optimizo procesos, diseño soluciones" data-en="I optimize processes, I design solutions">Optimizo procesos, diseño soluciones</p>
     <p>
-    <a href="mailto:valeriagonzalezsada@gmail.com">Correo</a> |
+    <a href="mailto:valeriagonzalezsada@gmail.com" data-es="Correo" data-en="Email">Correo</a> |
     <a href="https://github.com/ValeAbi" target="_blank">GitHub</a> |
     <a href="https://linkedin.com/in/valeriagonzalezsada" target="_blank">LinkedIn</a>
-    <a href="tel:+528124271319" target="_blank">Telefono</a>
+    <a href="tel:+528124271319" target="_blank" data-es="Telefono" data-en="Phone">Telefono</a>
     </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Selector de idioma ES/EN -->
+  <script>
+    const knob = document.getElementById('knob');
+    const opES = document.getElementById('opt-es');
+    const opEN = document.getElementById('opt-en');
+    let idiomaActual = 'es';
+
+    function actualizarVisual() {
+      if (idiomaActual === 'es') {
+        knob.style.transform = 'translateX(0)';
+        opES.classList.add('activa');
+        opEN.classList.remove('activa');
+      } else {
+        knob.style.transform = 'translateX(68px)';
+        opEN.classList.add('activa');
+        opES.classList.remove('activa');
+      }
+    }
+
+    function traducir() {
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${idiomaActual}`);
+      });
+      document.querySelectorAll('[data-es-html]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${idiomaActual}-html`);
+      });
+    }
+
+    opES.addEventListener('click', () => { idiomaActual = 'es'; actualizarVisual(); traducir(); });
+    opEN.addEventListener('click', () => { idiomaActual = 'en'; actualizarVisual(); traducir(); });
+  </script>
+
 </body>
 </html>
