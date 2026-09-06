@@ -1,4 +1,4 @@
-<script>
+d<script>
   document.addEventListener('DOMContentLoaded', () => {
     const skillsCols = document.querySelectorAll('.skills-column');
     const skillsObserver = new IntersectionObserver((entries) => {
