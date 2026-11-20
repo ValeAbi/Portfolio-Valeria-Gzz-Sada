@@ -507,6 +507,33 @@
   </div>
 </section>
 
+<!-- Robot animado -->
+<div class="robot-track" aria-hidden="true">
+  <div class="robot" id="robot">
+    <span class="robot-bubble" data-es="¡Gracias por tu visita!" data-en="Thanks for visiting!">¡Gracias por tu visita!</span>
+    <svg viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="10" x2="60" y2="20" stroke="#C9A96E" stroke-width="3" stroke-linecap="round" />
+      <circle class="robot-led" cx="60" cy="7" r="4" fill="#E3C88F" />
+      <rect x="38" y="20" width="44" height="28" rx="8" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
+      <circle cx="50" cy="34" r="4" fill="#E3C88F" />
+      <circle cx="70" cy="34" r="4" fill="#E3C88F" />
+      <rect x="30" y="50" width="60" height="22" rx="6" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
+      <rect x="48" y="57" width="24" height="8" rx="2" fill="none" stroke="#C9A96E" stroke-width="1.5" opacity="0.6" />
+      <g class="wheel">
+        <circle cx="44" cy="77" r="11" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
+        <line x1="44" y1="67" x2="44" y2="87" stroke="#C9A96E" stroke-width="2" />
+        <line x1="34" y1="77" x2="54" y2="77" stroke="#C9A96E" stroke-width="2" />
+      </g>
+      <g class="wheel">
+        <circle cx="76" cy="77" r="11" fill="#14100C" stroke="#C9A96E" stroke-width="3" />
+        <line x1="76" y1="67" x2="76" y2="87" stroke="#C9A96E" stroke-width="2" />
+        <line x1="66" y1="77" x2="86" y2="77" stroke="#C9A96E" stroke-width="2" />
+      </g>
+    </svg>
+  </div>
+  <div class="robot-line"></div>
+</div>
+
   <!-- Footer -->
   <footer class="footer">
     <p><span data-es="© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México" data-en="© 2026 Valeria Abigail González Sada | Personal Portfolio | Nuevo León, Mexico">© 2026 Valeria Abigail González Sada | Portafolio Personal |Nuevo León, México</span></p>
@@ -547,6 +574,31 @@
         });
       }, { threshold: 0.15 });
       skillsCols.forEach(col => skillsObserver.observe(col));
+    });
+  </script>
+
+    <!-- Animación del robot -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const robot = document.getElementById('robot');
+      if (!robot) return;
+
+      const robotObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            robot.classList.add('driving', 'moving');
+            robotObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      robotObserver.observe(robot.parentElement);
+
+      robot.addEventListener('animationend', (e) => {
+        if (e.animationName === 'robotDrive') {
+          robot.classList.remove('moving');
+          robot.classList.add('parked');
+        }
+      });
     });
   </script>
 
