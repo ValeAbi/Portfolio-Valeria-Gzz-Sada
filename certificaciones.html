@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificaciones - Valeria Abigail González Sada</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="circuit-bg" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="circuitPattern" width="220" height="220" patternUnits="userSpaceOnUse">
+          <path class="circuit-trace flow" d="M10 10 H110 V80 H200" />
+          <path class="circuit-trace" d="M0 150 H60 V210" />
+          <path class="circuit-trace flow" d="M150 0 V60 H220" />
+          <path class="circuit-trace" d="M180 120 H120 V180 H40" />
+          <circle class="circuit-node n1" cx="110" cy="80" r="3" />
+          <circle class="circuit-node n2" cx="60" cy="210" r="3" />
+          <circle class="circuit-node n3" cx="150" cy="60" r="3" />
+          <circle class="circuit-node n4" cx="120" cy="180" r="3" />
+          <circle class="circuit-node n5" cx="10" cy="10" r="2.2" />
+          <circle class="circuit-node n6" cx="220" cy="60" r="2.2" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuitPattern)" />
+    </svg>
+  </div>
+
+  <div class="selector-idioma">
+    <div class="toggle-idioma">
+      <div id="knob" class="knob"></div>
+      <button id="opt-es" class="opcion activa">ES</button>
+      <button id="opt-en" class="opcion">EN</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #14100C;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Valeria Abigail González Sada</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#acerca" data-es="Acerca de mí" data-en="About me">Acerca de mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#habilidades" data-es="Skills" data-en="Skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html" data-es="CV" data-en="Resume">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html" data-es="Blog" data-en="Blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="certificaciones.html" data-es="Certificaciones" data-en="Certifications">Certificaciones</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <h1 class="text-center" data-es="Certificaciones" data-en="Certifications">Certificaciones</h1>
+    <p class="text-center blog-intro"
+       data-es="Cursos y certificaciones que respaldan mi formación en automatización, programación y desarrollo de software."
+       data-en="Courses and certifications that back my training in automation, programming, and software development.">Cursos y certificaciones que respaldan mi formación en automatización, programación y desarrollo de software.</p>
+
+    <div class="cert-grid">
+
+      <!-- ===== CERTIFICACIÓN 1: Generation ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/Generation.png" alt="Generation México">
+          <div>
+            <h4 class="cert-nombre" data-es="Desarrolladora Java Full Stack" data-en="Java Full Stack Developer">Desarrolladora Java Full Stack</h4>
+            <p class="cert-institucion">Generation México</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Octubre 2026" data-en="October 2026">Octubre 2026</p>
+        <div class="tech-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">React</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">CSS</span>
+          <span class="tag">HTML</span>
+          <span class="tag">Backend</span>
+          <span class="tag" data-es="Agentes de IA" data-en="AI Agents">Agentes de IA</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">SQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Git/GitHub</span>
+          <span class="tag">Scrum/Kanban</span>
+          <span class="tag">Testing</span>
+          <span class="tag" data-es="Proyectos end-to-end" data-en="End-to-end projects">Proyectos end-to-end</span>
+          <span class="tag" data-es="Soft skills" data-en="Soft skills">Soft skills</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado java full stack Generation.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 2: Accenture IA ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/Accenture-Logo.png" alt="Accenture">
+          <div>
+            <h4 class="cert-nombre" data-es="Learning to Earning: Certificaciones en Inteligencia Artificial" data-en="Learning to Earning: Artificial Intelligence Certifications">Learning to Earning: Certificaciones en Inteligencia Artificial</h4>
+            <p class="cert-institucion">Accenture</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Julio 2026" data-en="July 2026">Julio 2026</p>
+        <div class="tech-tags">
+          <span class="tag" data-es="Uso responsable de la IA generativa" data-en="Responsible Use of Generative AI">Uso responsable de la IA generativa</span>
+          <span class="tag" data-es="Visión 360° de la IA generativa" data-en="360° View of Generative AI">Visión 360° de la IA generativa</span>
+          <span class="tag" data-es="Inteligencia artificial agéntica" data-en="Agentic Artificial Intelligence">Inteligencia artificial agéntica</span>
+          <span class="tag" data-es="Inteligencia artificial y machine learning" data-en="Artificial Intelligence and Machine Learning">Inteligencia artificial y machine learning</span>
+          <span class="tag" data-es="Dominando el prompting" data-en="Mastering Prompting">Dominando el prompting</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certicados Inteligencia artificial Learning to Earning.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 3: EXCI ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/UANL-Emblem.png" alt="UANL">
+          <div>
+            <h4 class="cert-nombre" data-es="Examen de Competencia en Inglés (EXCI)" data-en="English Proficiency Exam (EXCI)">Examen de Competencia en Inglés (EXCI)</h4>
+            <p class="cert-institucion">Universidad Autónoma de Nuevo León / Facultad de Ingeniería Mecánica y Eléctrica</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Febrero 2026" data-en="February 2026">Febrero 2026</p>
+        <div class="tech-tags">
+          <span class="tag" data-es="Competencia en inglés" data-en="English proficiency">Competencia en inglés</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado exci.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 4: Introducción a Java ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/Accenture-Logo.png" alt="Accenture">
+          <div>
+            <h4 class="cert-nombre" data-es="Introducción a Java" data-en="Introduction to Java">Introducción a Java</h4>
+            <p class="cert-institucion">Accenture</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Julio 2026" data-en="July 2026">Julio 2026</p>
+        <div class="tech-tags">
+          <span class="tag">Java</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/certificado_Learning_to_Earning.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 5: Bedu ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/bedutecn.jpg" alt="Bedu">
+          <div>
+            <h4 class="cert-nombre" data-es="Ciencia de datos Technolochicas" data-en="Data Science Technolochicas">Ciencia de datos Technolochicas</h4>
+            <p class="cert-institucion">Bedu</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Febrero 2025" data-en="February 2025">Febrero 2025</p>
+        <div class="tech-tags">
+          <span class="tag" data-es="Bases de datos" data-en="Databases">Bases de datos</span>
+          <span class="tag" data-es="Estadística" data-en="Statistics">Estadística</span>
+          <span class="tag" data-es="Programación con R" data-en="R programming">Programación con R</span>
+          <span class="tag" data-es="Procesamiento de datos con Python" data-en="Data processing with Python">Procesamiento de datos con Python</span>
+          <span class="tag" data-es="Análisis de datos con Python y machine learning" data-en="Data analysis with Python and machine learning">Análisis de datos con Python y machine learning</span>
+          <span class="tag" data-es="Fundamentos de SQL" data-en="SQL fundamentals">Fundamentos de SQL</span>
+          <span class="tag">Joins</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Pandas</span>
+          <span class="tag" data-es="Análisis exploratorio de datos" data-en="Exploratory data analysis">Análisis exploratorio de datos</span>
+          <span class="tag" data-es="Visualización avanzada" data-en="Advanced visualization">Visualización avanzada</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_Valeria Abigail Gzz Sada_CienciasDatos.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 6: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/p4hbionics.png" alt="P4HBionics">
+          <div>
+            <h4 class="cert-nombre" data-es="Programación en Python" data-en="Python Programming">Programación en Python</h4>
+            <p class="cert-institucion">P4HBionics</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Abril 2025" data-en="April 2025">Abril 2025</p>
+        <div class="tech-tags">
+          <span class="tag">Python</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_Valeria Abigail Gzz Sada_Phyton.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+       <!-- ===== CERTIFICACIÓN 7: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/redporciberseguridad.png" alt="redporciberseguridad/Microsoft">
+          <div>
+            <h4 class="cert-nombre" data-es="Azure Al Clinic: Al-900" data-en="Azure Al Clinic">Al Clinic 900</h4>
+            <p class="cert-institucion">Red por la ciberseguridad/Microsoft</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Abril 2025" data-en="April 2025">junio 2025</p>
+        <div class="tech-tags">
+          <span class="tag">Azure Al</span>
+          <span class="tag">Azure Machine Learning</span>
+          <span class="tag">Azure OpenAl</span>
+          <span class="tag">IA generativa</span>
+          <span class="tag">Visión por computadora</span>
+          <span class="tag">Procesamiento de lenguaje natural</span>
+          <span class="tag">IA Responsable</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_AzureAI900_Valeria Abigail Gzz Sada.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+       <!-- ===== CERTIFICACIÓN 7: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/hackermentor.png" alt="hackermentor">
+          <div>
+            <h4 class="cert-nombre" data-es="Auditor ISO 27:001 2022 Fundamentals" data-en="Auditor ISO 27:001 2022">Auditor</h4>
+            <p class="cert-institucion">Hacker mentor</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Abril 2025" data-en="Mayo 2025">Mayo 2025</p>
+        <div class="tech-tags">
+          <span class="tag">Seguridad de la información</span>
+          <span class="tag">Auditoría</span>
+          <span class="tag">Sistema de Gestión de la Seguridad de la Información</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_AuditorISO27001_Valeria Abigail González Sada.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 9: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/hazloconpowerbi.png" alt="hackermentor">
+          <div>
+            <h4 class="cert-nombre" data-es="Semana Power BI imparable" data-en="Semana Power BI imparable">PowerBI</h4>
+            <p class="cert-institucion">Rogelio Salinas</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Abril 2025" data-en="Marzo 2025">Marzo 2025</p>
+        <div class="tech-tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Visualización de datos</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_Valeria Abigail González Sada_POWER BI.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 11: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/UANL-Emblem.png" alt="UANL">
+          <div>
+            <h4 class="cert-nombre" data-es="Principios de Metalurgia" data-en="Principios de Metalurgia">Metalurgia</h4>
+            <p class="cert-institucion">Universidad Autónoma de Nuevo León - Facultad de Ingeniería Mecánica y Eléctrica</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Mayo 2024" data-en="Mayo 2024">Mayo 2024</p>
+        <div class="tech-tags">
+          <span class="tag">Metalurgia</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_Valeria Abigail Gzz Sada_Metalurgia.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 12: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/UANL-Emblem.png" alt="UANL">
+          <div>
+            <h4 class="cert-nombre" data-es="Diplomado en Refrigeración" data-en="Diplomado en Refrigeración">Refrigeración</h4>
+            <p class="cert-institucion">Universidad Autónoma de Nuevo León - Facultad de Ingeniería Mecánica y Eléctrica</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Noviembre 2024" data-en="Noviembre 2024">Noviembre 2024</p>
+        <div class="tech-tags">
+          <span class="tag">Refrigeración</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_Valeria Abigail Gzz Sada_Refrigeracion.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 13: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/icemexico.png" alt="ICE Mexico">
+          <div>
+            <h4 class="cert-nombre" data-es="Plan de Carrera Profesional" data-en="Plan de Carrera Profesional">Carrera profesional</h4>
+            <p class="cert-institucion">Universidad ICE México</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Abril 2025" data-en="Abril 2025">Abril 2025</p>
+        <div class="tech-tags">
+          <span class="tag">Plan de Carrera profesional</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/constancia_Valeria Abigail González Sada.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 13: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/coordinacionacademica" alt="CAMCOP">
+          <div>
+            <h4 class="cert-nombre" data-es="Gestión de Datos con Excel" data-en="Gestión de Datos con Excel">Carrera profesional</h4>
+            <p class="cert-institucion">Camara de Comercio y Capacitación Internacional</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Abril 2025" data-en="Abril 2025">Abril 2025</p>
+        <div class="tech-tags">
+          <span class="tag">Gestión de datos con excel</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado_Valeria Abigail González Sada_Gestión de Datos Excel.pdf" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+      <!-- ===== CERTIFICACIÓN 13: P4HBionics Python ===== -->
+      <div class="cert-card">
+        <div class="cert-header">
+          <img class="cert-logo" src="images/kenesaw state univeristy.png" alt="Coursera">
+          <div>
+            <h4 class="cert-nombre" data-es="Especialización Six Sigma Green Belt" data-en="Especialización Six Sigma Green Belt">Six Sigma Green Belt</h4>
+            <p class="cert-institucion">Kennesaw State University</p>
+          </div>
+        </div>
+        <p class="cert-fecha" data-es="Junio 2026" data-en="Junio 2026">Junio 2026</p>
+        <div class="tech-tags">
+          <span class="tag">Six Sigma</span>
+          <span class="tag">Lean</span>
+          <span class="tag">DMAIC</span>
+          <span class="tag">Mejora de procesos</span>
+        </div>
+        <div class="cert-links">
+          <a href="documentos/Certificados/Certificado Six Sigma Green Belt.png" target="_blank" class="cert-btn" data-es="Ver certificado" data-en="View certificate">Ver certificado</a>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><span data-es="© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México" data-en="© 2026 Valeria Abigail González Sada | Personal Portfolio | Nuevo León, Mexico">© 2026 Valeria Abigail González Sada | Portafolio Personal | Nuevo León, México</span></p>
+    <p data-es="Optimizo procesos, diseño soluciones" data-en="I optimize processes, I design solutions">Optimizo procesos, diseño soluciones</p>
+    <p>
+    <a href="mailto:valeriagonzalezsada@gmail.com" data-es="Correo" data-en="Email">Correo</a> |
+    <a href="https://github.com/ValeAbi" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/valeriagonzalezsada" target="_blank">LinkedIn</a>
+    <a href="tel:+528124271319" target="_blank" data-es="Telefono" data-en="Phone">Telefono</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Selector de idioma ES/EN -->
+  <script>
+    const knob = document.getElementById('knob');
+    const opES = document.getElementById('opt-es');
+    const opEN = document.getElementById('opt-en');
+    let idiomaActual = 'es';
+
+    function actualizarVisual() {
+      if (idiomaActual === 'es') {
+        knob.style.transform = 'translateX(0)';
+        opES.classList.add('activa');
+        opEN.classList.remove('activa');
+      } else {
+        knob.style.transform = 'translateX(68px)';
+        opEN.classList.add('activa');
+        opES.classList.remove('activa');
+      }
+    }
+
+    function traducir() {
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${idiomaActual}`);
+      });
+      document.querySelectorAll('[data-es-html]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${idiomaActual}-html`);
+      });
+    }
+
+    opES.addEventListener('click', () => { idiomaActual = 'es'; actualizarVisual(); traducir(); });
+    opEN.addEventListener('click', () => { idiomaActual = 'en'; actualizarVisual(); traducir(); });
+  </script>
+
+</body>
+</html>
